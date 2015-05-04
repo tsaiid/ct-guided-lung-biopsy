@@ -16,6 +16,17 @@
             <%= f.text_field :accession_no, label: "Accession No", label_col: "col-sm-5", control_col: "col-sm-7" %>
             </div>
           </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <%= f.text_field :patient_name, label: "Name", label_col: "col-sm-4", control_col: "col-sm-8" %>
+            </div>
+            <div class="col-sm-4">
+              <%= f.text_field :patient_age, label: "Age", label_col: "col-sm-4", control_col: "col-sm-8" %>
+            </div>
+            <div class="col-sm-4">
+              <%= f.select(:patient_gender, ['M', 'F'], { label: "Gender", label_col: "col-sm-8", control_col: "col-sm-4", selected: 'M' }) %>
+            </div>
+          </div>
         </div>
       </div>
 
