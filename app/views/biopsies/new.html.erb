@@ -144,7 +144,7 @@
               <div class="row">
                 <div class="col-sm-12">
                   <%= f.form_group :pneumothorax_degree, label: { text: "Pneumothorax" }, label_col: "col-sm-4", control_col: "col-sm-8" do %>
-                    <%= f.radio_button :pneumothorax_degree, 'no', label: "No", inline: true, :checked => true %>
+                    <%= f.radio_button :pneumothorax_degree, 'no', label: "No", inline: true, checked: true %>
                     <%= f.radio_button :pneumothorax_degree, 'minimal', label: "Minimal", inline: true %>
                     <%= f.radio_button :pneumothorax_degree, 'mild', label: "Mild", inline: true %>
                     <%= f.radio_button :pneumothorax_degree, 'moderate', label: "Moderate", inline: true %>
@@ -162,7 +162,7 @@
               <div class="row">
                 <div class="col-sm-12">
                   <%= f.form_group :hemorrhage_degree, label: { text: "Hemorrhage" }, label_col: "col-sm-4", control_col: "col-sm-8" do %>
-                    <%= f.radio_button :hemorrhage_degree, 'no', label: "No", inline: true, :checked => true %>
+                    <%= f.radio_button :hemorrhage_degree, 'no', label: "No", inline: true, checked: true %>
                     <%= f.radio_button :hemorrhage_degree, 'mild', label: "Mild", inline: true %>
                     <%= f.radio_button :hemorrhage_degree, 'moderate', label: "Moderate", inline: true %>
                     <%= f.radio_button :hemorrhage_degree, 'severe', label: "Severe", inline: true %>
@@ -174,13 +174,13 @@
                 <div class="col-sm-6">
                   <%= f.form_group :has_hemoptysis, label: { text: "Hemoptysis" }, label_col: "col-sm-6", control_col: "col-sm-6" do %>
                     <%= f.radio_button :has_hemoptysis, 'yes', label: "Yes", inline: true %>
-                    <%= f.radio_button :has_hemoptysis, 'no', label: "No", inline: true %>
+                    <%= f.radio_button :has_hemoptysis, 'no', label: "No", inline: true, checked: true %>
                   <% end %>
                 </div>
                 <div class="col-sm-6">
                   <%= f.form_group :has_asthma, label: { text: "Asthma" }, label_col: "col-sm-4", control_col: "col-sm-8" do %>
                     <%= f.radio_button :has_asthma, 'yes', label: "Yes", inline: true %>
-                    <%= f.radio_button :has_asthma, 'no', label: "No", inline: true %>
+                    <%= f.radio_button :has_asthma, 'no', label: "No", inline: true, checked: true %>
                   <% end %>
                 </div>
               </div>
@@ -189,7 +189,7 @@
                 <div class="col-sm-6">
                   <%= f.form_group :has_chest_tightness, label: { text: "Chest tightness" }, label_col: "col-sm-6", control_col: "col-sm-6" do %>
                     <%= f.radio_button :has_chest_tightness, 'yes', label: "Yes", inline: true %>
-                    <%= f.radio_button :has_chest_tightness, 'no', label: "No", inline: true %>
+                    <%= f.radio_button :has_chest_tightness, 'no', label: "No", inline: true, checked: true %>
                   <% end %>
                 </div>
                 <div class="col-sm-6">
@@ -210,21 +210,21 @@
             <div class="panel-body">
               <div class="row">
                 <div class="col-sm-4">
-              <%= f.select(:biopsy_numbers, 0..9, { label: "Biopsy attempts", label_col: "col-sm-8", control_col: "col-sm-4" }) %>
+              <%= f.select(:biopsy_numbers, 0..9, { label: "Biopsy attempts", label_col: "col-sm-8", control_col: "col-sm-4", selected: 3 }) %>
                 </div>
                 <div class="col-sm-4">
-              <%= f.select(:formalin_numbers, 0..9, { label: "Formalin", label_col: "col-sm-8", control_col: "col-sm-4" }) %>
+              <%= f.select(:formalin_numbers, 0..9, { label: "Formalin", label_col: "col-sm-8", control_col: "col-sm-4", selected: 2 }) %>
                 </div>
                 <div class="col-sm-4">
-              <%= f.select(:saline_numbers, 0..9, { label: "Saline", label_col: "col-sm-8", control_col: "col-sm-4" }) %>
+              <%= f.select(:saline_numbers, 0..9, { label: "Saline", label_col: "col-sm-8", control_col: "col-sm-4", selected: 1 }) %>
                 </div>
               </div>
               <div class="row">
                 <div class="col-sm-4">
-              <%= f.select(:aerobic_swab_numbers, 0..2, { label: "Aerobic swab", label_col: "col-sm-8", control_col: "col-sm-4" }) %>
+              <%= f.select(:aerobic_swab_numbers, 0..2, { label: "Aerobic swab", label_col: "col-sm-8", control_col: "col-sm-4", selected: 1 }) %>
                 </div>
                 <div class="col-sm-4">
-              <%= f.select(:anaerobic_swab_numbers, 0..2, { label: "Anaerobic swab", label_col: "col-sm-8", control_col: "col-sm-4" }) %>
+              <%= f.select(:anaerobic_swab_numbers, 0..2, { label: "Anaerobic swab", label_col: "col-sm-8", control_col: "col-sm-4", selected: 1 }) %>
                 </div>
               </div>
             </div>
