@@ -1,207 +1,237 @@
 <%= bootstrap_form_for @biopsy, layout: :horizontal, url: biopsies_path do |f| %>
 
-    <div class="row">
-      <div class="col-sm-6">
-
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Infomation</h3>
-  </div>
-  <div class="panel-body">
-    <div class="row">
-      <div class="col-sm-6">
-      <%= f.text_field :patient_id, label: "Patient ID", label_col: "col-sm-5", control_col: "col-sm-7" %>
-      </div>
-      <div class="col-sm-6">
-      <%= f.text_field :accession_no, label: "Accession No", label_col: "col-sm-5", control_col: "col-sm-7" %>
-      </div>
-    </div>
-  </div>
-</div>
-
-      </div>
-      <div class="col-sm-6">
-
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Method</h3>
-  </div>
-  <div class="panel-body">
-    <div class="row">
-      <div class="col-sm-6">
-    <%= f.text_field :biopsy_needle_size, label: "Biopsy Needle Size", append: "G", label_col: "col-sm-6", control_col: "col-sm-6" %>
-      </div>
-      <div class="col-sm-6">
-    <%= f.text_field :coaxial_needle_size, label: "Coaxial Needle Size", append: "G", label_col: "col-sm-6", control_col: "col-sm-6" %>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-6">
-    <%= f.form_group :use_contrast_media, label: { text: "Use Contrast Media" }, label_col: "col-sm-6", control_col: "col-sm-6" do %>
-      <%= f.radio_button :use_contrast_media, 'no', label: "No", inline: true, checked: true %>
-      <%= f.radio_button :use_contrast_media, 'yes', label: "Yes", inline: true %>
-    <% end %>
-      </div>
-      <div class="col-sm-6">
-            <%= f.text_field :anesthesia, label: "Anesthesia", label_col: "col-sm-4", control_col: "col-sm-8" %>
-      </div>
-    </div>
-    </div>
-  </div>
-</div>
-
-</div>
-</div>
-
-    <div class="row">
-      <div class="col-sm-6">
-
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Procedure</h3>
-  </div>
-  <div class="panel-body">
-    <%= f.form_group :position, label: { text: "Position" } do %>
-      <%= f.radio_button :position, 'supine', label: "Supine", inline: true, :checked => true %>
-      <%= f.radio_button :position, 'prone', label: "Prone", inline: true %>
-    <% end %>
-
-    <%= f.form_group :lesion_location, label: { text: "Location" } do %>
-      <%= f.radio_button :lesion_location, 'LUL', label: "LUL", inline: true, checked: true %>
-      <%= f.radio_button :lesion_location, 'LLL', label: "LUL", inline: true %>
-      <%= f.radio_button :lesion_location, 'Left lingular lobe', label: "Left lingular lobe", inline: true %>
-      <%= f.radio_button :lesion_location, 'RUL', label: "RUL", inline: true %>
-      <%= f.radio_button :lesion_location, 'RML', label: "RML", inline: true %>
-      <%= f.radio_button :lesion_location, 'RLL', label: "RLL", inline: true %>
-      <%= f.radio_button :lesion_location, 'other', label: "Other" %>
-    <% end %>
-
-    <div class="row">
-      <div class="col-sm-6">
-    <%= f.text_field :lesion_size, label: "Lesion Size", append: "mm", label_col: "col-sm-4", control_col: "col-sm-6" %>
-      </div>
-      <div class="col-sm-6">
-    <%= f.text_field :pleural_distance, label: "Pleural Distance", append: "mm", label_col: "col-sm-6", control_col: "col-sm-6" %>
-      </div>
-    </div>
-
-    <%= f.form_group :lesion_type, label: { text: "Lesion Type" } do %>
-      <%= f.radio_button :lesion_type, 'solid', label: "Solid", inline: true, :checked => true %>
-      <%= f.radio_button :lesion_type, 'part solid', label: "Part solid", inline: true %>
-      <%= f.radio_button :lesion_type, 'GGO', label: "GGO", inline: true %>
-      <%= f.radio_button :lesion_type, 'Multiple GGOs', label: "Multiple GGOs", inline: true %>
-    <% end %>
-
-    <div class="row">
-      <div class="col-sm-8">
-    <%= f.form_group :emphysema_degree, label: { text: "Emphysema" }, label_col: "col-sm-3", control_col: "col-sm-8" do %>
-      <%= f.radio_button :emphysema_degree, 'no', label: "No", inline: true, :checked => true %>
-      <%= f.radio_button :emphysema_degree, 'mild', label: "Mild", inline: true %>
-      <%= f.radio_button :emphysema_degree, 'moderate', label: "Moderate", inline: true %>
-      <%= f.radio_button :emphysema_degree, 'severe', label: "Severe", inline: true %>
-    <% end %>
-      </div>
-      <div class="col-sm-4">
-    <%= f.form_group :lesion_is_cavitary, label: { text: "Cavity" }, label_col: "col-sm-4", control_col: "col-sm-8" do %>
-      <%= f.radio_button :lesion_is_cavitary, 'no', label: "No", inline: true, :checked => true %>
-      <%= f.radio_button :lesion_is_cavitary, 'yes', label: "Yes", inline: true %>
-    <% end %>
-      </div>
-    </div>
-
-    <%= f.form_group :patient_cooperation, label: { text: "Patient Cooperation" } do %>
-      <%= f.radio_button :patient_cooperation, 'good', label: "Good", inline: true, :checked => true %>
-      <%= f.radio_button :patient_cooperation, 'fair', label: "Fair", inline: true %>
-      <%= f.radio_button :patient_cooperation, 'poor', label: "Poor", inline: true %>
-    <% end %>
-  </div>
-</div>
-
-    </div>
-
+  <div class="row">
     <div class="col-sm-6">
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Complications</h3>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Infomation</h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-6">
+            <%= f.text_field :patient_id, label: "Patient ID", label_col: "col-sm-5", control_col: "col-sm-7" %>
+            </div>
+            <div class="col-sm-6">
+            <%= f.text_field :accession_no, label: "Accession No", label_col: "col-sm-5", control_col: "col-sm-7" %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-sm-6">
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Method</h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-6">
+          <%= f.text_field :biopsy_needle_size, label: "Biopsy Needle Size", append: "G", label_col: "col-sm-6", control_col: "col-sm-6" %>
+            </div>
+            <div class="col-sm-6">
+          <%= f.text_field :coaxial_needle_size, label: "Coaxial Needle Size", append: "G", label_col: "col-sm-6", control_col: "col-sm-6" %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+          <%= f.form_group :use_contrast_media, label: { text: "Use Contrast Media" }, label_col: "col-sm-6", control_col: "col-sm-6" do %>
+            <%= f.radio_button :use_contrast_media, 'no', label: "No", inline: true, checked: true %>
+            <%= f.radio_button :use_contrast_media, 'yes', label: "Yes", inline: true %>
+          <% end %>
+            </div>
+            <div class="col-sm-6">
+                  <%= f.text_field :anesthesia, label: "Anesthesia", label_col: "col-sm-4", control_col: "col-sm-8" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
-  <div class="panel-body">
-    <%= f.form_group :pneumothorax_degree, label: { text: "Pneumothorax" }, label_col: "col-sm-4", control_col: "col-sm-8" do %>
-      <%= f.radio_button :pneumothorax_degree, 'no', label: "No", inline: true, :checked => true %>
-      <%= f.radio_button :pneumothorax_degree, 'minimal', label: "Minimal", inline: true %>
-      <%= f.radio_button :pneumothorax_degree, 'mild', label: "Mild", inline: true %>
-      <%= f.radio_button :pneumothorax_degree, 'moderate', label: "Moderate", inline: true %>
-      <%= f.radio_button :pneumothorax_degree, 'severe', label: "Severe", inline: true %>
-    <% end %>
 
-    <%= f.text_field :pneumothorax_management, label_col: "col-sm-4", control_col: "col-sm-8" %>
+  <div class="row">
+    <div class="col-sm-6">
 
-    <%= f.form_group :hemorrhage_degree, label: { text: "Hemorrhage" }, label_col: "col-sm-4", control_col: "col-sm-8" do %>
-      <%= f.radio_button :hemorrhage_degree, 'no', label: "No", inline: true, :checked => true %>
-      <%= f.radio_button :hemorrhage_degree, 'mild', label: "Mild", inline: true %>
-      <%= f.radio_button :hemorrhage_degree, 'moderate', label: "Moderate", inline: true %>
-      <%= f.radio_button :hemorrhage_degree, 'severe', label: "Severe", inline: true %>
-    <% end %>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Procedure</h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-12">
+          <%= f.form_group :position, label: { text: "Position" } do %>
+            <%= f.radio_button :position, 'supine', label: "Supine", inline: true, :checked => true %>
+            <%= f.radio_button :position, 'prone', label: "Prone", inline: true %>
+          <% end %>
+          </div></div>
 
-    <div class="row">
-      <div class="col-sm-6">
-    <%= f.form_group :has_hemoptysis, label: { text: "Hemoptysis" }, label_col: "col-sm-6", control_col: "col-sm-6" do %>
-      <%= f.radio_button :has_hemoptysis, 'yes', label: "Yes", inline: true %>
-      <%= f.radio_button :has_hemoptysis, 'no', label: "No", inline: true %>
-    <% end %>
+          <div class="row">
+            <div class="col-sm-12">
+          <%= f.form_group :lesion_location, label: { text: "Location" } do %>
+            <%= f.radio_button :lesion_location, 'LUL', label: "LUL", inline: true, checked: true %>
+            <%= f.radio_button :lesion_location, 'LLL', label: "LUL", inline: true %>
+            <%= f.radio_button :lesion_location, 'Left lingular lobe', label: "Left lingular lobe", inline: true %>
+            <%= f.radio_button :lesion_location, 'RUL', label: "RUL", inline: true %>
+            <%= f.radio_button :lesion_location, 'RML', label: "RML", inline: true %>
+            <%= f.radio_button :lesion_location, 'RLL', label: "RLL", inline: true %>
+            <%= f.radio_button :lesion_location, 'other', label: "Other" %>
+          <% end %>
+          </div></div>
+
+          <div class="row">
+            <div class="col-sm-6">
+          <%= f.text_field :lesion_size, label: "Lesion Size", append: "mm", label_col: "col-sm-4", control_col: "col-sm-6" %>
+            </div>
+            <div class="col-sm-6">
+          <%= f.text_field :pleural_distance, label: "Pleural Distance", append: "mm", label_col: "col-sm-6", control_col: "col-sm-6" %>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-12">
+          <%= f.form_group :lesion_type, label: { text: "Lesion Type" } do %>
+            <%= f.radio_button :lesion_type, 'solid', label: "Solid", inline: true, :checked => true %>
+            <%= f.radio_button :lesion_type, 'part solid', label: "Part solid", inline: true %>
+            <%= f.radio_button :lesion_type, 'GGO', label: "GGO", inline: true %>
+            <%= f.radio_button :lesion_type, 'Multiple GGOs', label: "Multiple GGOs", inline: true %>
+          <% end %>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-8">
+          <%= f.form_group :emphysema_degree, label: { text: "Emphysema" }, label_col: "col-sm-3", control_col: "col-sm-8" do %>
+            <%= f.radio_button :emphysema_degree, 'no', label: "No", inline: true, :checked => true %>
+            <%= f.radio_button :emphysema_degree, 'mild', label: "Mild", inline: true %>
+            <%= f.radio_button :emphysema_degree, 'moderate', label: "Moderate", inline: true %>
+            <%= f.radio_button :emphysema_degree, 'severe', label: "Severe", inline: true %>
+          <% end %>
+            </div>
+            <div class="col-sm-4">
+          <%= f.form_group :lesion_is_cavitary, label: { text: "Cavity" }, label_col: "col-sm-4", control_col: "col-sm-8" do %>
+            <%= f.radio_button :lesion_is_cavitary, 'no', label: "No", inline: true, :checked => true %>
+            <%= f.radio_button :lesion_is_cavitary, 'yes', label: "Yes", inline: true %>
+          <% end %>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-12">
+          <%= f.form_group :patient_cooperation, label: { text: "Patient Cooperation" } do %>
+            <%= f.radio_button :patient_cooperation, 'good', label: "Good", inline: true, :checked => true %>
+            <%= f.radio_button :patient_cooperation, 'fair', label: "Fair", inline: true %>
+            <%= f.radio_button :patient_cooperation, 'poor', label: "Poor", inline: true %>
+          <% end %>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-sm-6">
-    <%= f.form_group :has_asthma, label: { text: "Asthma" }, label_col: "col-sm-4", control_col: "col-sm-8" do %>
-      <%= f.radio_button :has_asthma, 'yes', label: "Yes", inline: true %>
-      <%= f.radio_button :has_asthma, 'no', label: "No", inline: true %>
-    <% end %>
-      </div>
-      </div>
+
+      <%= f.primary "Create" %>
+
+    </div>
+    <div class="col-sm-6">
       <div class="row">
-      <div class="col-sm-6">
-    <%= f.form_group :has_chest_tightness, label: { text: "Chest tightness" }, label_col: "col-sm-6", control_col: "col-sm-6" do %>
-      <%= f.radio_button :has_chest_tightness, 'yes', label: "Yes", inline: true %>
-      <%= f.radio_button :has_chest_tightness, 'no', label: "No", inline: true %>
-    <% end %>
+        <div class="col-sm-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Complications</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-sm-12">
+                  <%= f.form_group :pneumothorax_degree, label: { text: "Pneumothorax" }, label_col: "col-sm-4", control_col: "col-sm-8" do %>
+                    <%= f.radio_button :pneumothorax_degree, 'no', label: "No", inline: true, :checked => true %>
+                    <%= f.radio_button :pneumothorax_degree, 'minimal', label: "Minimal", inline: true %>
+                    <%= f.radio_button :pneumothorax_degree, 'mild', label: "Mild", inline: true %>
+                    <%= f.radio_button :pneumothorax_degree, 'moderate', label: "Moderate", inline: true %>
+                    <%= f.radio_button :pneumothorax_degree, 'severe', label: "Severe", inline: true %>
+                  <% end %>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-12">
+                  <%= f.text_field :pneumothorax_management, label_col: "col-sm-4", control_col: "col-sm-8" %>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-12">
+                  <%= f.form_group :hemorrhage_degree, label: { text: "Hemorrhage" }, label_col: "col-sm-4", control_col: "col-sm-8" do %>
+                    <%= f.radio_button :hemorrhage_degree, 'no', label: "No", inline: true, :checked => true %>
+                    <%= f.radio_button :hemorrhage_degree, 'mild', label: "Mild", inline: true %>
+                    <%= f.radio_button :hemorrhage_degree, 'moderate', label: "Moderate", inline: true %>
+                    <%= f.radio_button :hemorrhage_degree, 'severe', label: "Severe", inline: true %>
+                  <% end %>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-6">
+                  <%= f.form_group :has_hemoptysis, label: { text: "Hemoptysis" }, label_col: "col-sm-6", control_col: "col-sm-6" do %>
+                    <%= f.radio_button :has_hemoptysis, 'yes', label: "Yes", inline: true %>
+                    <%= f.radio_button :has_hemoptysis, 'no', label: "No", inline: true %>
+                  <% end %>
+                </div>
+                <div class="col-sm-6">
+                  <%= f.form_group :has_asthma, label: { text: "Asthma" }, label_col: "col-sm-4", control_col: "col-sm-8" do %>
+                    <%= f.radio_button :has_asthma, 'yes', label: "Yes", inline: true %>
+                    <%= f.radio_button :has_asthma, 'no', label: "No", inline: true %>
+                  <% end %>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-6">
+                  <%= f.form_group :has_chest_tightness, label: { text: "Chest tightness" }, label_col: "col-sm-6", control_col: "col-sm-6" do %>
+                    <%= f.radio_button :has_chest_tightness, 'yes', label: "Yes", inline: true %>
+                    <%= f.radio_button :has_chest_tightness, 'no', label: "No", inline: true %>
+                  <% end %>
+                </div>
+                <div class="col-sm-6">
+                  <%= f.text_field :other_complications, label: "Others", label_col: "col-sm-4", control_col: "col-sm-8" %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-sm-6">
-    <%= f.text_field :other_complications, label: "Others", label_col: "col-sm-4", control_col: "col-sm-8" %>
-    </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Specimens</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-sm-4">
+              <%= f.select(:biopsy_numbers, 0..9, { label: "Biopsy attempts", label_col: "col-sm-8", control_col: "col-sm-4" }) %>
+                </div>
+                <div class="col-sm-4">
+              <%= f.select(:formalin_numbers, 0..9, { label: "Formalin", label_col: "col-sm-8", control_col: "col-sm-4" }) %>
+                </div>
+                <div class="col-sm-4">
+              <%= f.select(:saline_numbers, 0..9, { label: "Saline", label_col: "col-sm-8", control_col: "col-sm-4" }) %>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-4">
+              <%= f.select(:aerobic_swab_numbers, 0..2, { label: "Aerobic swab", label_col: "col-sm-8", control_col: "col-sm-4" }) %>
+                </div>
+                <div class="col-sm-4">
+              <%= f.select(:anaerobic_swab_numbers, 0..2, { label: "Anaerobic swab", label_col: "col-sm-8", control_col: "col-sm-4" }) %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
-</div>
-
-      </div>
-      <div class="col-sm-6">
-
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Specimens</h3>
-  </div>
-  <div class="panel-body">
-    <div class="row">
-      <div class="col-sm-4">
-    <%= f.select(:biopsy_numbers, 0..9, { label: "Biopsy attempts", label_col: "col-sm-8", control_col: "col-sm-4" }) %>
-      </div>
-      <div class="col-sm-4">
-    <%= f.select(:formalin_numbers, 0..9, { label: "Formalin", label_col: "col-sm-8", control_col: "col-sm-4" }) %>
-      </div>
-      <div class="col-sm-4">
-    <%= f.select(:saline_numbers, 0..9, { label: "Saline", label_col: "col-sm-8", control_col: "col-sm-4" }) %>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-4">
-    <%= f.select(:aerobic_swab_numbers, 0..2, { label: "Aerobic swab", label_col: "col-sm-8", control_col: "col-sm-4" }) %>
-      </div>
-      <div class="col-sm-4">
-    <%= f.select(:anaerobic_swab_numbers, 0..2, { label: "Anaerobic swab", label_col: "col-sm-8", control_col: "col-sm-4" }) %>
-      </div>
-    </div>
-  </div>
-</div>
-    <%= f.primary "Create" %>
-      </div>
-      </div>
-
-
 <% end %>
