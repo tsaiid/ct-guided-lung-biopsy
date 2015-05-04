@@ -1,0 +1,9 @@
+<%= form_for @biopsy, :url => biopsy_path(@biopsy), :method => :patch do |f| %>
+    <%= f.label :patient_id, "Patitne ID" %>
+    <%= f.text_field :patient_id %>
+
+    <%= f.label :accession_no, "Accession No" %>
+    <%= f.text_area :accession_no %>
+
+    <%= f.submit "Update" %>
+<% end %>

@@ -1,0 +1,180 @@
+<%= form_for @biopsy, :url => biopsies_path do |f| %>
+    <%= f.label :patient_id, "Patitne ID" %>
+    <%= f.text_field :patient_id %>
+
+    <%= f.label :accession_no, "Accession No" %>
+    <%= f.text_field :accession_no %>
+
+    <%= f.label :biopsy_needle_size, "Biopsy Needle Size" %>
+    <%= f.text_field :biopsy_needle_size %>
+
+    <%= f.label :coaxial_needle_size, "Coaxial Needle Size" %>
+    <%= f.text_field :coaxial_needle_size %>
+
+    <%= f.label :use_contrast_media, "Use Contrast Media" %>
+    <%= f.radio_button :use_contrast_media, 'no', :checked => true %>
+    <%= label :use_contrast_media, 'No' %>
+    <%= f.radio_button :use_contrast_media, 'yes' %>
+    <%= label :use_contrast_media, 'Yes' %>
+
+    <%= f.label :anesthesia, "anesthesia" %>
+    <%= f.text_field :anesthesia %>
+
+    <%= f.label :position, "Position" %>
+    <%= f.radio_button :position, 'supine', :checked => true %>
+    <%= label :position, 'Supine' %>
+    <%= f.radio_button :position, 'prone' %>
+    <%= label :position, 'Prone' %>
+
+    <%= f.label :lesion_location, "Location" %>
+    <%= f.radio_button :lesion_location, 'LUL', :checked => true %>
+    <%= label :lesion_location, 'LUL' %>
+    <%= f.radio_button :lesion_location, 'LLL' %>
+    <%= label :lesion_location, 'LLL' %>
+    <%= f.radio_button :lesion_location, 'Left lingular lobe' %>
+    <%= label :lesion_location, 'Left lingular lobe' %>
+    <%= f.radio_button :lesion_location, 'RUL' %>
+    <%= label :lesion_location, 'RUL' %>
+    <%= f.radio_button :lesion_location, 'RML' %>
+    <%= label :lesion_location, 'RML' %>
+    <%= f.radio_button :lesion_location, 'RLL' %>
+    <%= label :lesion_location, 'RLL' %>
+    <%= f.radio_button :lesion_location, 'other' %>
+    <%= f.text_field :lesion_location %>
+
+    <%= f.label :lesion_size, "Lesion Size" %>
+    <%= f.text_field :lesion_size %> mm
+
+    <%= f.label :lesion_is_cavitary, "Cavity or central necrosis" %>
+    <%= f.radio_button :lesion_is_cavitary, 'no', :checked => true %>
+    <%= label :lesion_is_cavitary, 'No' %>
+    <%= f.radio_button :lesion_is_cavitary, 'yes' %>
+    <%= label :lesion_is_cavitary, 'Yes' %>
+
+    <%= f.label :lesion_type, "Location" %>
+    <%= f.radio_button :lesion_type, 'solid', :checked => true %>
+    <%= label :lesion_type, 'Solid' %>
+    <%= f.radio_button :lesion_type, 'part solid' %>
+    <%= label :lesion_type, 'Part solid' %>
+    <%= f.radio_button :lesion_type, 'GGO' %>
+    <%= label :lesion_type, 'GGO' %>
+    <%= f.radio_button :lesion_type, 'Multiple GGOs' %>
+    <%= label :lesion_type, 'Multiple GGOs' %>
+    <%= f.radio_button :lesion_type, 'other' %>
+    <%= f.text_field :lesion_type %>
+
+    <%= f.label :pleural_distance, "Pleural Distance" %>
+    <%= f.text_field :pleural_distance %> mm
+
+    <%= f.label :emphysema_degree, "Emphysema" %>
+    <%= f.radio_button :emphysema_degree, 'no', :checked => true %>
+    <%= label :emphysema_degree, 'No' %>
+    <%= f.radio_button :emphysema_degree, 'mild' %>
+    <%= label :emphysema_degree, 'Mild' %>
+    <%= f.radio_button :emphysema_degree, 'moderate' %>
+    <%= label :emphysema_degree, 'Moderate' %>
+    <%= f.radio_button :emphysema_degree, 'severe' %>
+    <%= label :emphysema_degree, 'Severe' %>
+
+    <%= f.label :patient_cooperation, "Patient Cooperation" %>
+    <%= f.radio_button :patient_cooperation, 'good', :checked => true %>
+    <%= label :patient_cooperation, 'Good' %>
+    <%= f.radio_button :patient_cooperation, 'fair' %>
+    <%= label :patient_cooperation, 'Fair' %>
+    <%= f.radio_button :patient_cooperation, 'poor' %>
+    <%= label :patient_cooperation, 'Poor' %>
+
+    <%= f.label :pneumothorax_degree, "Pneumothorax" %>
+    <%= f.radio_button :pneumothorax_degree, 'no', :checked => true %>
+    <%= label :pneumothorax_degree, 'No' %>
+    <%= f.radio_button :pneumothorax_degree, 'minimal' %>
+    <%= label :pneumothorax_degree, 'Minimal' %>
+    <%= f.radio_button :pneumothorax_degree, 'mild' %>
+    <%= label :pneumothorax_degree, 'Mild' %>
+    <%= f.radio_button :pneumothorax_degree, 'moderate' %>
+    <%= label :pneumothorax_degree, 'Moderate' %>
+    <%= f.radio_button :pneumothorax_degree, 'severe' %>
+    <%= label :pneumothorax_degree, 'Severe' %>
+
+    <%= f.label :pneumothorax_management, "Pneumothorax management" %>
+    <%= f.radio_button :pneumothorax_management, 'yes' %>
+    <%= label :pneumothorax_management, 'Yes' %>
+    <%= f.text_field :pneumothorax_management %>
+    <%= f.radio_button :pneumothorax_management, 'no' %>
+    <%= label :pneumothorax_management, 'No' %>
+
+    <%= f.label :hemorrhage_degree, "Hemorrhage" %>
+    <%= f.radio_button :hemorrhage_degree, 'no', :checked => true %>
+    <%= label :hemorrhage_degree, 'No' %>
+    <%= f.radio_button :hemorrhage_degree, 'mild' %>
+    <%= label :hemorrhage_degree, 'Mild' %>
+    <%= f.radio_button :hemorrhage_degree, 'moderate' %>
+    <%= label :hemorrhage_degree, 'Moderate' %>
+    <%= f.radio_button :hemorrhage_degree, 'severe' %>
+    <%= label :hemorrhage_degree, 'Severe' %>
+
+    <%= f.label :has_hemoptysis, "Hemoptysis" %>
+    <%= f.radio_button :has_hemoptysis, 'yes' %>
+    <%= label :has_hemoptysis, 'Yes' %>
+    <%= f.radio_button :has_hemoptysis, 'no' %>
+    <%= label :has_hemoptysis, 'No' %>
+
+    <%= f.label :has_chest_tightness, "Chest tightness" %>
+    <%= f.radio_button :has_chest_tightness, 'yes' %>
+    <%= label :has_chest_tightness, 'Yes' %>
+    <%= f.radio_button :has_chest_tightness, 'no' %>
+    <%= label :has_chest_tightness, 'No' %>
+
+    <%= f.label :has_asthma, "Asthma" %>
+    <%= f.radio_button :has_asthma, 'yes' %>
+    <%= label :has_asthma, 'Yes' %>
+    <%= f.radio_button :has_asthma, 'no' %>
+    <%= label :has_asthma, 'No' %>
+
+    <%= f.label :other_complications, "Others" %>
+    <%= f.text_field :other_complications %> mm
+
+    <%= f.label :biopsy_numbers, "Biopsy numbers" %>
+    <%= f.select(:biopsy_numbers) do %>
+      <% (0..9).each do |n| %>
+        <%= content_tag(:option, n, value: n) %>
+      <% end %>
+    <% end %>
+
+    <%= f.label :formalin_numbers, "Formalin numbers" %>
+    <%= f.select(:formalin_numbers) do %>
+      <% (0..9).each do |n| %>
+        <%= content_tag(:option, n, value: n) %>
+      <% end %>
+    <% end %>
+
+    <%= f.label :saline_numbers, "Saline numbers" %>
+    <%= f.select(:saline_numbers) do %>
+      <% (0..9).each do |n| %>
+        <%= content_tag(:option, n, value: n) %>
+      <% end %>
+    <% end %>
+
+    <%= f.label :saline_numbers, "Saline numbers" %>
+    <%= f.select(:saline_numbers) do %>
+      <% (0..9).each do |n| %>
+        <%= content_tag(:option, n, value: n) %>
+      <% end %>
+    <% end %>
+
+    <%= f.label :aerobic_swab_numbers, "Aerobic swab numbers" %>
+    <%= f.select(:aerobic_swab_numbers) do %>
+      <% (0..2).each do |n| %>
+        <%= content_tag(:option, n, value: n) %>
+      <% end %>
+    <% end %>
+
+    <%= f.label :anaerobic_swab_numbers, "Anaerobic swab numbers" %>
+    <%= f.select(:anaerobic_swab_numbers) do %>
+      <% (0..2).each do |n| %>
+        <%= content_tag(:option, n, value: n) %>
+      <% end %>
+    <% end %>
+
+    <%= f.submit "Create" %>
+<% end %>
