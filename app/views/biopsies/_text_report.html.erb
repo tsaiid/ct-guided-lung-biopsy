@@ -1,0 +1,30 @@
+CT guide procedure was performed under clinical request. The operation procedure and potential risk (hemoptysis, pneumothorax, focal hemorrhage, aspiration, chest tightness, air embolism) were well explained. Patient agreement and consensus were obtained.
+
+Method
+1. Biopsy<%= '/Co-axial' unless @biopsy.coaxial_needle_size.nil? %> Needle: <%= @biopsy.biopsy_needle_size %> G<%= "/#{@biopsy.coaxial_needle_size} G" unless @biopsy.coaxial_needle_size.nil? %>.
+2. Contrast medium use: <%= @biopsy.use_contrast_media %>
+3. Anesthesis: <%= @biopsy.anesthesia %>
+
+1. Position: <%= @biopsy.position %>
+2. Target lesions
+   A. Location: <%= @biopsy.lesion_location %>
+   B. Main lesion size: <%= @biopsy.lesion_size %> mm
+   C. Cavity or central necrosis: <%= @biopsy.lesion_is_cavitary %>
+   D. Type: <%= @biopsy.lesion_type %>
+   E. Pleural distance: <%= @biopsy.pleural_distance %> mm
+3. Focal emphysema of lung parenchyma: <%= @biopsy.emphysema_degree %>
+4. Patient cooperation: <%= @biopsy.patient_cooperation %>
+5. Complications:
+   A. Pheumothorax: <%= @biopsy.pneumothorax_degree %> <%= "
+      Management: #{@biopsy.pneumothorax_management}" if @biopsy.pneumothorax_degree != 'no' %>
+   B. Focal hemorrhage: <%= @biopsy.hemorrhage_degree %>
+   C. Hemoptysis: <%= @biopsy.has_hemoptysis %>
+   D. Chest tightness: <%= @biopsy.has_chest_tightness %>
+   E. Asthma: <%= @biopsy.has_asthma %> <%= "
+   F. Others: #{@biopsy.other_complications}" unless @biopsy.other_complications.empty? %>
+6. Specimen: (Biopsy attempts: <%= @biopsy.biopsy_numbers %> times)
+   <%= "Formalin: #{@biopsy.formalin_numbers}; normal saline: #{@biopsy.saline_numbers}" %>
+   <%= "Swab culture: aerobic: #{@biopsy.aerobic_swab_numbers}; anaerobic: #{@biopsy.anaerobic_swab_numbers}." %>
+
+Suggestion
+The patient was sent back to the ward under stable condition. Recommend close f/u patient's vital signs, bed rest and compression for at least 4 hours. F/U CXR 6 hours later.
