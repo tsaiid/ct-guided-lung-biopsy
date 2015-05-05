@@ -3,6 +3,10 @@ class BiopsiesController < ApplicationController
     @biopsies = Biopsy.all
   end
 
+  def show
+    @biopsy = Biopsy.find(params[:id])
+  end
+
   def new
     @biopsy = Biopsy.new
     @biopsy.patient_id = params[:patient_id] unless params[:patient_id].nil?
