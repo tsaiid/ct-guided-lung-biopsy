@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150504153508) do
+ActiveRecord::Schema.define(version: 20150505031959) do
 
   create_table "biopsies", force: :cascade do |t|
     t.string   "patient_id",              null: false
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20150504153508) do
     t.string   "patient_name"
     t.string   "patient_gender"
     t.string   "patient_age"
+    t.date     "exam_date"
   end
 
 end
