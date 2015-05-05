@@ -43,5 +43,12 @@ end
 private
 
 def biopsy_params
-  params.require(:biopsy).permit(:patient_id, :accession_no, :patient_name, :patient_age, :patient_gender)
+  params.require(:biopsy).permit( :patient_id, :patient_name, :patient_age, :patient_gender,
+                                  :accession_no, :exam_date,
+                                  :biopsy_needle_size, :coaxial_needle_size, :use_contrast_media, :anesthesia,
+                                  :position, :lesion_location, :lesion_size, :lesion_is_cavitary, :lesion_type, :pleural_distance,
+                                  :emphysema_degree, :patient_cooperation,
+                                  :pneumothorax_degree, :pneumothorax_management,
+                                  :hemorrhage_degree, :has_hemoptysis, :has_chest_tightness, :has_asthma, :other_complications,
+                                  :biopsy_numbers, :formalin_numbers, :saline_numbers, :aerobic_swab_numbers, :anaerobic_swab_numbers)
 end
