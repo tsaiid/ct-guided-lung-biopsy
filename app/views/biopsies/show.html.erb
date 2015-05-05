@@ -1,24 +1,39 @@
 <div class="row">
-<div class="col-sm-4">
-<%= @biopsy.patient_id %>
-</div>
+  <div class="col-sm-4">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Information</h3>
+          </div>
+          <div class="panel-body">
+            <h3><%= @biopsy.patient_name %></h3>
+            <h4>ID: <%= @biopsy.patient_id %></h4>
+            <h4>AccNo: <%= @biopsy.accession_no %></h4>
+            <h4>Exam Date: <%= @biopsy.exam_date %></h4>
+            <h4>Operator: <%=  %></h4>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<div class="col-sm-8">
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Report Text</h3>
+    <div class="row">
+      <div class="col-sm-12">
+        <p><%= link_to 'Back to index', biopsies_path %></p>
+      </div>
+    </div>
   </div>
-  <div class="panel-body">
-<textarea class="form-control" rows="30">
-<%= render "biopsies/text_report" %>
-</textarea>
-  </div>
-</div>
-</div>
-</div>
 
-<div class="row">
-  <div class="col-sm-12">
-<p><%= link_to 'Back to index', biopsies_path %></p>
+  <div class="col-sm-8">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Report Text</h3>
+      </div>
+      <div class="panel-body">
+        <textarea class="form-control" rows="30">
+          <%= render "biopsies/text_report" %>
+        </textarea>
+      </div>
+    </div>
   </div>
 </div>
