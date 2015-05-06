@@ -1,0 +1,14 @@
+<%= bootstrap_form_for @radiologist, layout: :horizontal, url: radiologists_path do |f| %>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Radiologist Infomation</h3>
+    </div>
+    <div class="panel-body">
+        <%= f.text_field :no, label: "卡號" %>
+        <%= f.text_field :name, label: "姓名" %>
+        <%= f.form_group do %>
+          <%= f.primary "Create" %>
+        <% end %>
+    </div>
+  </div>
+<% end %>
