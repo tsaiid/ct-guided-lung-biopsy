@@ -7,11 +7,29 @@
             <h3 class="panel-title">Information</h3>
           </div>
           <div class="panel-body">
-            <h3><%= @biopsy.patient_name %></h3>
-            <h4>ID: <%= @biopsy.patient_id %></h4>
-            <h4>AccNo: <%= @biopsy.accession_no %></h4>
-            <h4>Exam Date: <%= @biopsy.exam_date %></h4>
-            <h4>Operator: <%=  %></h4>
+            <h3><%= @biopsy.patient_name %> <small>(<%= @biopsy.patient_age %> / <%= @biopsy.patient_gender %>)</small></h3>
+            <table>
+              <tr>
+                <th>ID</th>
+                <td><%= @biopsy.patient_id %></td>
+              </tr>
+              <tr>
+                <th>AccNo</th>
+                <td><%= @biopsy.accession_no %></td>
+              </tr>
+              <tr>
+                <th>Exam Date</th>
+                <td><%= @biopsy.exam_date %></td>
+              </tr>
+              <tr>
+                <th>Operator</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Last update</th>
+                <td></td>
+              </tr>
+            </table>
           </div>
         </div>
       </div>
