@@ -1,11 +1,23 @@
-<% @biopsies.each do |biopsy| %>
-  <li>
-    <%= biopsy.patient_id %>
-    <%= link_to "Show", biopsy_path(biopsy) %>
-    <%= link_to 'Edit', edit_biopsy_path(biopsy) %>
-    <%= button_to 'Delete', biopsy_path(biopsy), :method => :delete %>
-  </li>
-<% end %>
-</ul>
+<table class="table table-hover">
+  <tr>
+    <th>Date</th>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Operator</th>
+    <th>Func</th>
+  </tr>
 
-<%= link_to 'New biopsy', new_biopsy_path %>
+<% @biopsies.each do |biopsy| %>
+  <tr>
+    <td><%= biopsy.exam_date %></td>
+    <td><%= biopsy.patient_id %></td>
+    <td><%= biopsy.patient_name %></td>
+    <td><%=  %></td>
+    <td>
+      <%= link_to "Show", biopsy_path(biopsy), class: "btn btn-primary" %>
+      <%= link_to 'Edit', edit_biopsy_path(biopsy), class: "btn btn-warning" %>
+      <%= link_to 'Delete', biopsy_path(biopsy), :method => :delete, class: "btn btn-danger" %>
+    </td>
+  </tr>
+<% end %>
+</table>
