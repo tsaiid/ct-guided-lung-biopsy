@@ -12,7 +12,11 @@
     <td><%= biopsy.exam_date %></td>
     <td><%= biopsy.patient_id %></td>
     <td><%= biopsy.patient_name %></td>
-    <td><%=  %></td>
+    <td>
+      <% biopsy.radiologists.each do |r| %>
+        <%= r.name %>
+      <% end %>
+    </td>
     <td>
       <%= link_to "Show", biopsy_path(biopsy), class: "btn btn-primary" %>
       <%= link_to 'Edit', edit_biopsy_path(biopsy), class: "btn btn-warning" %>
