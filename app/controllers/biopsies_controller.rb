@@ -61,6 +61,6 @@ def biopsy_params
                                   :emphysema_degree, :patient_cooperation,
                                   :pneumothorax_degree, :hemorrhage_degree, :has_hemoptysis, :has_chest_tightness, :has_asthma, :other_complications,
                                   :complication_management_drain, :complication_management_other,
-                                  :biopsy_numbers, :formalin_numbers, :saline_numbers, :aerobic_swab_numbers, :anaerobic_swab_numbers,
+                                  :biopsy_numbers, :formalin_numbers, :saline_numbers, :aerobic_swab_numbers, :anaerobic_swab_numbers, :tb_numbers,
                                   radiologists: [])
 end
