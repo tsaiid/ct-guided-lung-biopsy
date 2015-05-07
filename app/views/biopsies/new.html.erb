@@ -196,14 +196,14 @@
               <div class="row">
                 <div class="col-sm-6">
                   <%= f.form_group :has_hemoptysis, label: { text: "Hemoptysis" }, label_col: "col-sm-6", control_col: "col-sm-6" do %>
-                    <%= f.radio_button :has_hemoptysis, 'yes', label: "Yes", inline: true %>
                     <%= f.radio_button :has_hemoptysis, 'no', label: "No", inline: true, checked: true %>
+                    <%= f.radio_button :has_hemoptysis, 'yes', label: "Yes", inline: true %>
                   <% end %>
                 </div>
                 <div class="col-sm-6">
                   <%= f.form_group :has_asthma, label: { text: "Asthma" }, label_col: "col-sm-4", control_col: "col-sm-8" do %>
-                    <%= f.radio_button :has_asthma, 'yes', label: "Yes", inline: true %>
                     <%= f.radio_button :has_asthma, 'no', label: "No", inline: true, checked: true %>
+                    <%= f.radio_button :has_asthma, 'yes', label: "Yes", inline: true %>
                   <% end %>
                 </div>
               </div>
@@ -211,8 +211,8 @@
               <div class="row">
                 <div class="col-sm-6">
                   <%= f.form_group :has_chest_tightness, label: { text: "Chest tightness" }, label_col: "col-sm-6", control_col: "col-sm-6" do %>
-                    <%= f.radio_button :has_chest_tightness, 'yes', label: "Yes", inline: true %>
                     <%= f.radio_button :has_chest_tightness, 'no', label: "No", inline: true, checked: true %>
+                    <%= f.radio_button :has_chest_tightness, 'yes', label: "Yes", inline: true %>
                   <% end %>
                 </div>
                 <div class="col-sm-6">
