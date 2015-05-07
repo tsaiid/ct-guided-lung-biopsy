@@ -1,3 +1,4 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+$(document).ready ->
+  $('#lesion_location_other').focusin ->
+    $('#lesion_location_other_radio').prop("checked", true)
+    console.log($('input[name="biopsy[lesion_location]"]:checked')[0].value)
