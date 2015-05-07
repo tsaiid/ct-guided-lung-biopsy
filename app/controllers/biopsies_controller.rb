@@ -57,8 +57,8 @@ def biopsy_params
                                   :biopsy_needle_size, :coaxial_needle_size, :use_contrast_media, :anesthesia,
                                   :position, :lesion_location, :lesion_size, :lesion_is_cavitary, :lesion_type, :pleural_distance,
                                   :emphysema_degree, :patient_cooperation,
-                                  :pneumothorax_degree, :pneumothorax_management,
-                                  :hemorrhage_degree, :has_hemoptysis, :has_chest_tightness, :has_asthma, :other_complications,
+                                  :pneumothorax_degree, :hemorrhage_degree, :has_hemoptysis, :has_chest_tightness, :has_asthma, :other_complications,
+                                  :complication_management_drain, :complication_management_other,
                                   :biopsy_numbers, :formalin_numbers, :saline_numbers, :aerobic_swab_numbers, :anaerobic_swab_numbers,
                                   radiologists: [])
 end
