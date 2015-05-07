@@ -223,8 +223,8 @@
               <div class="row">
                 <div class="col-sm-6">
                   <%= f.form_group :complication_management_drain, label: { text: "Management" }, label_col: "col-sm-6", control_col: "col-sm-6" do %>
-                    <%= f.radio_button :complication_management_drain, 'pigtail', label: "Pigtail", inline: true %>
-                    <%= f.radio_button :complication_management_drain, 'chest tube', label: "Chest tube", inline: true %>
+                    <%= f.radio_button :complication_management_drain, 'pigtail', label: "Pigtail", inline: true, class: "as_checkbox" %>
+                    <%= f.radio_button :complication_management_drain, 'chest tube', label: "Chest tube", inline: true, class: "as_checkbox" %>
                   <% end %>
                 </div>
                 <div class="col-sm-6">
