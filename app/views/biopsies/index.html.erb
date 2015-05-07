@@ -3,6 +3,8 @@
     <th>Date</th>
     <th>ID</th>
     <th>Name</th>
+    <th>Location</th>
+    <th>Size (mm)</th>
     <th>Operator</th>
     <th>Func</th>
   </tr>
@@ -12,6 +14,8 @@
     <td><%= biopsy.exam_date %></td>
     <td><%= biopsy.patient_id %></td>
     <td><%= biopsy.patient_name %></td>
+    <td><%= biopsy.lesion_location %></td>
+    <td><%= biopsy.lesion_size %></td>
     <td>
       <% biopsy.radiologists.each do |r| %>
         <%= r.name %>
