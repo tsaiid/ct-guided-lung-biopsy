@@ -48,3 +48,8 @@ group :development, :test do
   gem 'guard-livereload', '~> 2.4', require: false
 end
 
+gem 'capistrano', '~> 3.4.0'
+gem 'capistrano-rvm'
+gem 'capistrano-bundler'
+gem 'capistrano-rails'
+gem 'capistrano-passenger'
