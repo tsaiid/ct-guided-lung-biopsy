@@ -20,3 +20,6 @@
 Capfile
 config/deploy.rb
 config/deploy/
+
+# Pow
+.powrc
