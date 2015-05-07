@@ -15,3 +15,8 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Capistrano
+Capfile
+config/deploy.rb
+config/deploy/
