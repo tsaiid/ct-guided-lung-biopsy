@@ -10,7 +10,7 @@
         <div class="panel-body">
           <div class="row">
             <div class="col-sm-4">
-              <%= f.date_field :exam_date, label: "Date", value: Time.now.strftime('%Y-%m-%d'), label_col: "col-sm-2", control_col: "col-sm-10" %>
+              <%= f.date_field :exam_date, label: "Date", value: @biopsy.exam_date, label_col: "col-sm-2", control_col: "col-sm-10" %>
             </div>
             <div class="col-sm-4">
             <%= f.text_field :patient_id, label: "病歷號", label_col: "col-sm-5", control_col: "col-sm-7" %>

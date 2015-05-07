@@ -9,6 +9,7 @@ class BiopsiesController < ApplicationController
 
   def new
     @biopsy = Biopsy.new
+    @biopsy.exam_date = params[:exam_date].nil? ? Time.now.strftime('%Y-%m-%d') : params[:exam_date]
     @biopsy.patient_id = params[:patient_id] unless params[:patient_id].nil?
     @biopsy.accession_no = params[:accession_no] unless params[:accession_no].nil?
     @biopsy.patient_name = params[:patient_name] unless params[:patient_name].nil?
