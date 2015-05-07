@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150507115938) do
+ActiveRecord::Schema.define(version: 20150507235101) do
 
   create_table "biopsies", force: :cascade do |t|
     t.string   "patient_id",                    null: false
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20150507115938) do
     t.integer  "lesion_size",                   null: false
     t.string   "lesion_is_cavitary",            null: false
     t.string   "lesion_type",                   null: false
-    t.integer  "pleural_distance",              null: false
+    t.integer  "pleural_distance"
     t.string   "emphysema_degree",              null: false
     t.string   "patient_cooperation",           null: false
     t.string   "pneumothorax_degree",           null: false
