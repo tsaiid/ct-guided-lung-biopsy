@@ -4,17 +4,16 @@ Method
 1. Biopsy<%= '/Co-axial' unless @biopsy.coaxial_needle_size.nil? %> Needle: <%= @biopsy.biopsy_needle_size %> G<%= "/#{@biopsy.coaxial_needle_size} G" unless @biopsy.coaxial_needle_size.nil? %>.
 2. Contrast medium use: <%= @biopsy.use_contrast_media %>
 3. Anesthesis: <%= @biopsy.anesthesia %>
-
-1. Position: <%= @biopsy.position %>
-2. Target lesions
+4. Position: <%= @biopsy.position %>
+5. Target lesions
    A. Location: <%= @biopsy.lesion_location %>
    B. Main lesion size: <%= @biopsy.lesion_size %> mm
    C. Cavity or central necrosis: <%= @biopsy.lesion_is_cavitary %>
    D. Type: <%= @biopsy.lesion_type %>
    E. Pleural distance: <%= @biopsy.pleural_distance %> mm
-3. Focal emphysema of lung parenchyma: <%= @biopsy.emphysema_degree %>
-4. Patient cooperation: <%= @biopsy.patient_cooperation %>
-5. Complications:
+6. Focal emphysema of lung parenchyma: <%= @biopsy.emphysema_degree %>
+7. Patient cooperation: <%= @biopsy.patient_cooperation %>
+8. Complications:
    A. Pheumothorax: <%= @biopsy.pneumothorax_degree %>
    B. Focal hemorrhage: <%= @biopsy.hemorrhage_degree %>
    C. Hemoptysis: <%= @biopsy.has_hemoptysis %>
@@ -24,7 +23,7 @@ Method
    <% unless (@biopsy.complication_management_drain.blank? && @biopsy.complication_management_other.blank?) %>
    G. Management: <%= [@biopsy.complication_management_drain, @biopsy.complication_management_other].reject(&:empty?).join(';') %>
    <% end %>
-6. Specimen: (Biopsy attempts: <%= @biopsy.biopsy_numbers %> times)
+9. Specimen: (Biopsy attempts: <%= @biopsy.biopsy_numbers %> times)
    Formalin: <%= @biopsy.formalin_numbers %>; normal saline: <%= @biopsy.saline_numbers %>
    Swab culture: aerobic: <%= @biopsy.aerobic_swab_numbers %>; anaerobic: <%= @biopsy.anaerobic_swab_numbers %>."
 
