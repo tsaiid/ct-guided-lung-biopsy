@@ -20,6 +20,7 @@ class BiopsiesController < ApplicationController
   def create
     biopsy_params_without_radiologists = biopsy_params.except(:radiologists)
     @biopsy = Biopsy.new(biopsy_params_without_radiologists)
+    @biopsy.lesion_location = params[:lesion_location_other] if @biopsy.lesion_location == "other"
     biopsy_params[:radiologists].each do |r|
       @biopsy.radiologists << Radiologist.where(id: r)
     end
