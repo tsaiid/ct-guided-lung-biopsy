@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150505031959) do
+ActiveRecord::Schema.define(version: 20150506132928) do
 
   create_table "biopsies", force: :cascade do |t|
     t.string   "patient_id",              null: false
@@ -46,6 +46,21 @@ ActiveRecord::Schema.define(version: 20150505031959) do
     t.string   "patient_gender"
     t.string   "patient_age"
     t.date     "exam_date"
+  end
+
+  create_table "biopsies_radiologists", id: false, force: :cascade do |t|
+    t.integer "biopsy_id"
+    t.integer "radiologist_id"
+  end
+
+  add_index "biopsies_radiologists", ["biopsy_id"], name: "index_biopsies_radiologists_on_biopsy_id"
+  add_index "biopsies_radiologists", ["radiologist_id"], name: "index_biopsies_radiologists_on_radiologist_id"
+
+  create_table "radiologists", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.string   "no",         null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

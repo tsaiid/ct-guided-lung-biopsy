@@ -147,6 +147,8 @@
         </div>
       </div>
 
+      <%= select_tag("biopsy[radiologists][]", options_from_collection_for_select(Radiologist.all, :id, :name)) %>
+
       <%= f.primary "Create" %>
 
     </div>
