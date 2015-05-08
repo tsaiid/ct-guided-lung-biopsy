@@ -1,6 +1,6 @@
 class BiopsiesController < ApplicationController
   def index
-    @biopsies = Biopsy.all
+    @biopsies = Biopsy.order(exam_date: :desc)
   end
 
   def show
