@@ -61,9 +61,10 @@
 
 <script>
   $(document).ready(function() {
-    var btn_copy = new ZeroClipboard($("#btn_copy"))
     ZeroClipboard.config({
       swfPath: '<%= asset_path "ZeroClipboard.swf" %>'
     });
+
+    var btn_copy = new ZeroClipboard($("#btn_copy"));
   });
 </script>
