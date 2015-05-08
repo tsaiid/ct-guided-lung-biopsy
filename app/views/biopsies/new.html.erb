@@ -152,8 +152,8 @@
       </div>
       <div class="row">
         <div class="col-sm-4">
-          <%= f.form_group :radiologists, label: { text: "Operator" }, label_col: "col-sm-6", control_col: "col-sm-6" do %>
-            <%= select_tag("biopsy[radiologists][]", options_from_collection_for_select(Radiologist.all, :id, :name), { class: "form-control" }) %>
+          <%= f.form_group :radiologist_ids, label: { text: "Operator" }, label_col: "col-sm-6", control_col: "col-sm-6" do %>
+            <%= select_tag("biopsy[radiologist_ids][]", options_from_collection_for_select(Radiologist.all, :id, :name), { class: "form-control" }) %>
           <% end %>
         </div>
         <div class="col-sm-8">

@@ -11,6 +11,7 @@ class Biopsy < ActiveRecord::Base
             :emphysema_degree, :patient_cooperation,
             :pneumothorax_degree, :hemorrhage_degree, :has_hemoptysis, :has_chest_tightness,
             :has_asthma, :biopsy_numbers, :patient_name, :patient_gender, :patient_age, :exam_date,
+            :radiologist_ids,
             presence: true
   validates :pleural_distance, presence: true, numericality: { only_integer: true }, unless: 'lesion_location == "other"'
 

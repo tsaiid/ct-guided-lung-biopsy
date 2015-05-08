@@ -18,11 +18,7 @@ class BiopsiesController < ApplicationController
   end
 
   def create
-    biopsy_params_without_radiologists = biopsy_params.except(:radiologists)
-    @biopsy = Biopsy.new(biopsy_params_without_radiologists)
-    biopsy_params[:radiologists].each do |r|
-      @biopsy.radiologists << Radiologist.where(id: r)
-    end
+    @biopsy = Biopsy.new(biopsy_params)
 
     if @biopsy.save
       redirect_to :action => :index
@@ -61,5 +57,5 @@ def biopsy_params
                                   :pneumothorax_degree, :hemorrhage_degree, :has_hemoptysis, :has_chest_tightness, :has_asthma, :other_complications,
                                   :complication_management_drain, :complication_management_other,
                                   :biopsy_numbers, :formalin_numbers, :saline_numbers, :aerobic_swab_numbers, :anaerobic_swab_numbers, :tb_numbers,
-                                  radiologists: [])
+                                  radiologist_ids: [])
 end
