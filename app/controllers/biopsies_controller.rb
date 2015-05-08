@@ -21,7 +21,7 @@ class BiopsiesController < ApplicationController
     @biopsy = Biopsy.new(biopsy_params)
 
     if @biopsy.save
-      redirect_to :action => :index
+      redirect_to action: "show", id: @biopsy.id
     else
       render :action => :new
     end
