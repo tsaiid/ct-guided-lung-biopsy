@@ -20,7 +20,6 @@ class BiopsiesController < ApplicationController
   def create
     biopsy_params_without_radiologists = biopsy_params.except(:radiologists)
     @biopsy = Biopsy.new(biopsy_params_without_radiologists)
-    @biopsy.lesion_location = params[:lesion_location_other] if @biopsy.lesion_location == "other"
     biopsy_params[:radiologists].each do |r|
       @biopsy.radiologists << Radiologist.where(id: r)
     end
@@ -57,7 +56,7 @@ def biopsy_params
   params.require(:biopsy).permit( :patient_id, :patient_name, :patient_age, :patient_gender,
                                   :accession_no, :exam_date,
                                   :biopsy_needle_size, :coaxial_needle_size, :use_contrast_media, :anesthesia,
-                                  :position, :lesion_location, :lesion_size, :lesion_is_cavitary, :lesion_type, :pleural_distance,
+                                  :position, :lesion_location, :lesion_location_other, :lesion_size, :lesion_is_cavitary, :lesion_type, :pleural_distance,
                                   :emphysema_degree, :patient_cooperation,
                                   :pneumothorax_degree, :hemorrhage_degree, :has_hemoptysis, :has_chest_tightness, :has_asthma, :other_complications,
                                   :complication_management_drain, :complication_management_other,
