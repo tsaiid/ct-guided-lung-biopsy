@@ -45,13 +45,22 @@
   <div class="col-sm-8">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Report Text</h3>
+        <h3 class="panel-title">
+          Report Text
+          <button type="button" class="btn btn-primary btn-xs pull-right" data-clipboard-target="text_report" id="btn_copy" title="Copy to clipboard">
+            Copy
+          </button>
+        </h3>
       </div>
       <div class="panel-body">
-        <textarea class="form-control" rows="30">
-<%= render "biopsies/text_report" %>
-        </textarea>
+        <textarea class="form-control" rows="30" id="text_report"><%= render "biopsies/text_report" %></textarea>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  $(document).ready(function() {
+    var btn_copy = new ZeroClipboard($("#btn_copy"))
+  });
+</script>
