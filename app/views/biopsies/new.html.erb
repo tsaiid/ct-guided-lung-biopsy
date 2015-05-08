@@ -87,17 +87,16 @@
             <div class="col-sm-12">
               <%= f.form_group :lesion_location, label: { text: "Location" } do %>
                 <%= f.radio_button :lesion_location, 'LUL', label: "LUL", inline: true, checked: true %>
-                <%= f.radio_button :lesion_location, 'LLL', label: "LUL", inline: true %>
+                <%= f.radio_button :lesion_location, 'LLL', label: "LLL", inline: true %>
                 <%= f.radio_button :lesion_location, 'Left lingular lobe', label: "Left lingular lobe", inline: true %>
                 <%= f.radio_button :lesion_location, 'RUL', label: "RUL", inline: true %>
                 <%= f.radio_button :lesion_location, 'RML', label: "RML", inline: true %>
                 <%= f.radio_button :lesion_location, 'RLL', label: "RLL", inline: true %>
-
                 <div class="input-group input-group-sm">
                   <span class="input-group-addon">
-                    <input type="radio" name="biopsy[lesion_location]" id="lesion_location_other_radio" value="other">
+                    <input type="radio" name="biopsy[lesion_location]" id="biopsy_lesion_location_other" value="other">
                   </span>
-                  <input type="text" class="form-control" id="lesion_location_other" name="lesion_location_other" placeholder="Others">
+                  <input type="text" class="form-control" id="lesion_location_other" name="biopsy[lesion_location_other]" placeholder="Others">
                 </div>
               <% end %>
             </div>
