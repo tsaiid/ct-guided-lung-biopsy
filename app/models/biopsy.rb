@@ -15,6 +15,8 @@ class Biopsy < ActiveRecord::Base
             presence: true
   validates :pleural_distance, presence: true, numericality: { only_integer: true }, unless: 'lesion_location == "other"'
 
+  strip_attributes only: [:patient_id, :accession_no, :patient_name, :patient_age]
+
   def lesion_location_text
     lesion_location == 'other' ? lesion_location_other : lesion_location
   end

@@ -54,3 +54,5 @@ gem 'capistrano-bundler'
 gem 'capistrano-rails'
 
 gem 'zeroclipboard-rails'
+
+gem "strip_attributes"
