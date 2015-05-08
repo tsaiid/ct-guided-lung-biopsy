@@ -13,4 +13,8 @@ class Biopsy < ActiveRecord::Base
             :has_asthma, :biopsy_numbers, :patient_name, :patient_gender, :patient_age, :exam_date,
             presence: true
   validates :pleural_distance, presence: true, numericality: { only_integer: true }, unless: 'lesion_location == "other"'
+
+  def lesion_location_text
+    lesion_location == 'other' ? lesion_location_other : lesion_location
+  end
 end
