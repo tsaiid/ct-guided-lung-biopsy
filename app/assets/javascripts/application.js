@@ -16,3 +16,7 @@
 //= require turbolinks
 //= require zeroclipboard
 //= require_tree .
+
+$(document).on("page:before-change", function(){
+  ZeroClipboard.destroy();
+});
