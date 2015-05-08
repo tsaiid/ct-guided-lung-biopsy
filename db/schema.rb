@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150507235101) do
+ActiveRecord::Schema.define(version: 20150508001531) do
 
   create_table "biopsies", force: :cascade do |t|
     t.string   "patient_id",                    null: false
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 20150507235101) do
     t.string   "complication_management_drain"
     t.string   "complication_management_other"
     t.integer  "tb_numbers"
+    t.string   "lesion_location_other"
   end
 
   create_table "biopsies_radiologists", id: false, force: :cascade do |t|
