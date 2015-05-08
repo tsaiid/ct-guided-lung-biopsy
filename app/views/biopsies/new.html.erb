@@ -43,10 +43,10 @@
         <div class="panel-body">
           <div class="row">
             <div class="col-sm-6">
-              <%= f.text_field :biopsy_needle_size, label: "Biopsy Needle Size", value: '21', append: "G", label_col: "col-sm-6", control_col: "col-sm-6" %>
+              <%= f.text_field :biopsy_needle_size, label: "Biopsy Needle Size", value: '20', append: "G", label_col: "col-sm-6", control_col: "col-sm-6" %>
             </div>
             <div class="col-sm-6">
-              <%= f.text_field :coaxial_needle_size, label: "Coaxial Needle Size", value: '20', append: "G", label_col: "col-sm-6", control_col: "col-sm-6" %>
+              <%= f.text_field :coaxial_needle_size, label: "Coaxial Needle Size", value: '19', append: "G", label_col: "col-sm-6", control_col: "col-sm-6" %>
             </div>
           </div>
           <div class="row">
@@ -184,8 +184,8 @@
               <div class="row">
                 <div class="col-sm-12">
                   <%= f.form_group :hemorrhage_degree, label: { text: "Hemorrhage" }, label_col: "col-sm-3", control_col: "col-sm-9" do %>
-                    <%= f.radio_button :hemorrhage_degree, 'no', label: "No", inline: true, checked: true %>
-                    <%= f.radio_button :hemorrhage_degree, 'mild', label: "Mild", inline: true %>
+                    <%= f.radio_button :hemorrhage_degree, 'no', label: "No", inline: true %>
+                    <%= f.radio_button :hemorrhage_degree, 'mild', label: "Mild", inline: true, checked: true %>
                     <%= f.radio_button :hemorrhage_degree, 'moderate', label: "Moderate", inline: true %>
                     <%= f.radio_button :hemorrhage_degree, 'severe', label: "Severe", inline: true %>
                   <% end %>
