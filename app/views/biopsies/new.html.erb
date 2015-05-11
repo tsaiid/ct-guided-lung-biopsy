@@ -243,14 +243,17 @@
             </div>
             <div class="panel-body">
               <div class="row">
-                <div class="col-sm-4">
-                  <%= f.select(:biopsy_numbers, 0..9, { label: "切片次數", label_col: "col-sm-8", control_col: "col-sm-4", selected: 3 }) %>
+                <div class="col-sm-3">
+                  <%= f.select(:biopsy_numbers, 0..9, { label: "切片數", label_col: "col-sm-6", control_col: "col-sm-6", selected: 3 }) %>
                 </div>
-                <div class="col-sm-4">
-                  <%= f.select(:formalin_numbers, 0..9, { label: "福馬林", label_col: "col-sm-8", control_col: "col-sm-4", selected: 2 }) %>
+                <div class="col-sm-3">
+                  <%= f.select(:formalin_numbers, 0..9, { label: "福馬林", label_col: "col-sm-6", control_col: "col-sm-6", selected: 2 }) %>
                 </div>
-                <div class="col-sm-4">
-                  <%= f.select(:saline_numbers, 0..9, { label: "Saline", label_col: "col-sm-8", control_col: "col-sm-4", selected: 1 }) %>
+                <div class="col-sm-3">
+                  <%= f.select(:saline_numbers, 0..9, { label: "Saline", label_col: "col-sm-6", control_col: "col-sm-6", selected: 1 }) %>
+                </div>
+                <div class="col-sm-3">
+                  <%= f.select(:gross, ["yes", "equivocal", "no"], { label: "Gross", label_col: "col-sm-6", control_col: "col-sm-6", selected: "yes" }) %>
                 </div>
               </div>
               <div class="row">

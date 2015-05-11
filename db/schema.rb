@@ -11,36 +11,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150508001531) do
+ActiveRecord::Schema.define(version: 20150511043906) do
 
   create_table "biopsies", force: :cascade do |t|
-    t.string   "patient_id",                    null: false
-    t.string   "accession_no",                  null: false
-    t.integer  "biopsy_needle_size",            null: false
+    t.string   "patient_id",                                    null: false
+    t.string   "accession_no",                                  null: false
+    t.integer  "biopsy_needle_size",                            null: false
     t.integer  "coaxial_needle_size"
-    t.string   "use_contrast_media",            null: false
+    t.string   "use_contrast_media",                            null: false
     t.string   "anesthesia"
-    t.string   "position",                      null: false
-    t.string   "lesion_location",               null: false
-    t.integer  "lesion_size",                   null: false
-    t.string   "lesion_is_cavitary",            null: false
-    t.string   "lesion_type",                   null: false
+    t.string   "position",                                      null: false
+    t.string   "lesion_location",                               null: false
+    t.integer  "lesion_size",                                   null: false
+    t.string   "lesion_is_cavitary",                            null: false
+    t.string   "lesion_type",                                   null: false
     t.integer  "pleural_distance"
-    t.string   "emphysema_degree",              null: false
-    t.string   "patient_cooperation",           null: false
-    t.string   "pneumothorax_degree",           null: false
-    t.string   "hemorrhage_degree",             null: false
-    t.string   "has_hemoptysis",                null: false
-    t.string   "has_chest_tightness",           null: false
-    t.string   "has_asthma",                    null: false
+    t.string   "emphysema_degree",                              null: false
+    t.string   "patient_cooperation",                           null: false
+    t.string   "pneumothorax_degree",                           null: false
+    t.string   "hemorrhage_degree",                             null: false
+    t.string   "has_hemoptysis",                                null: false
+    t.string   "has_chest_tightness",                           null: false
+    t.string   "has_asthma",                                    null: false
     t.string   "other_complications"
-    t.integer  "biopsy_numbers",                null: false
+    t.integer  "biopsy_numbers",                                null: false
     t.integer  "formalin_numbers"
     t.integer  "saline_numbers"
     t.integer  "aerobic_swab_numbers"
     t.integer  "anaerobic_swab_numbers"
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
+    t.datetime "created_at",                                    null: false
+    t.datetime "updated_at",                                    null: false
     t.string   "patient_name"
     t.string   "patient_gender"
     t.string   "patient_age"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20150508001531) do
     t.string   "complication_management_other"
     t.integer  "tb_numbers"
     t.string   "lesion_location_other"
+    t.string   "gross",                         default: "yes"
   end
 
   create_table "biopsies_radiologists", id: false, force: :cascade do |t|
