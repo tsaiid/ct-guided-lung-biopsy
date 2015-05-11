@@ -20,4 +20,8 @@ class Biopsy < ActiveRecord::Base
   def lesion_location_text
     lesion_location == 'other' ? lesion_location_other : lesion_location
   end
+
+  def impression_text
+    impression == 'other' ? impression_other : impression
+  end
 end

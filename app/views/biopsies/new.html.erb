@@ -30,47 +30,24 @@
               <%= f.select(:patient_gender, ['M', 'F'], { label: "性別", label_col: "col-sm-8", control_col: "col-sm-4" }) %>
             </div>
           </div>
-        </div>
-      </div>
-
-    </div>
-    <div class="col-sm-6">
-
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title">Method</h3>
-        </div>
-        <div class="panel-body">
           <div class="row">
-            <div class="col-sm-6">
-              <%= f.text_field :biopsy_needle_size, label: "Biopsy Needle Size", value: '20', append: "G", label_col: "col-sm-6", control_col: "col-sm-6" %>
-            </div>
-            <div class="col-sm-6">
-              <%= f.text_field :coaxial_needle_size, label: "Coaxial Needle Size", value: '19', append: "G", label_col: "col-sm-6", control_col: "col-sm-6" %>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-6">
-              <%= f.form_group :use_contrast_media, label: { text: "Use Contrast Media" }, label_col: "col-sm-6", control_col: "col-sm-6" do %>
-                <%= f.radio_button :use_contrast_media, 'no', label: "No", inline: true, checked: true %>
-                <%= f.radio_button :use_contrast_media, 'yes', label: "Yes", inline: true %>
-              <% end %>
-            </div>
-            <div class="col-sm-6">
-              <%= f.form_group :anesthesia, label: { text: "Anesthesia" }, label_col: "col-sm-6", control_col: "col-sm-6" do %>
-                <%= f.radio_button :anesthesia, 'local', label: "Local", inline: true, checked: true %>
-                <%= f.radio_button :anesthesia, 'general', label: "General", inline: true %>
+            <div class="col-sm-12">
+              <%= f.form_group :impression, label: { text: "Impression" } do %>
+                <%= f.radio_button :impression, 'cancer', label: "Lung Cancer", inline: true, checked: true %>
+                <%= f.radio_button :impression, 'metastasis', label: "Metastasis", inline: true %>
+                <%= f.radio_button :impression, 'tuberculosis', label: "TB", inline: true %>
+                <%= f.radio_button :impression, 'inflammation', label: "Inflammation", inline: true %>
+                <div class="input-group input-group-sm">
+                  <span class="input-group-addon">
+                    <input type="radio" name="biopsy[impression]" id="biopsy_impression_other" value="other">
+                  </span>
+                  <input type="text" class="form-control" id="impression_other" name="biopsy[impression_other]" placeholder="Others">
+                </div>
               <% end %>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
-  </div>
-
-  <div class="row">
-    <div class="col-sm-6">
 
       <div class="panel panel-default">
         <div class="panel-heading">
@@ -157,11 +134,43 @@
           <% end %>
         </div>
         <div class="col-sm-8">
-      <%= f.primary "Create" %>
+          <%= f.primary "Create" %>
         </div>
       </div>
+
     </div>
     <div class="col-sm-6">
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Method</h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-6">
+              <%= f.text_field :biopsy_needle_size, label: "Biopsy Needle Size", value: '20', append: "G", label_col: "col-sm-6", control_col: "col-sm-6" %>
+            </div>
+            <div class="col-sm-6">
+              <%= f.text_field :coaxial_needle_size, label: "Coaxial Needle Size", value: '19', append: "G", label_col: "col-sm-6", control_col: "col-sm-6" %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <%= f.form_group :use_contrast_media, label: { text: "Use Contrast Media" }, label_col: "col-sm-6", control_col: "col-sm-6" do %>
+                <%= f.radio_button :use_contrast_media, 'no', label: "No", inline: true, checked: true %>
+                <%= f.radio_button :use_contrast_media, 'yes', label: "Yes", inline: true %>
+              <% end %>
+            </div>
+            <div class="col-sm-6">
+              <%= f.form_group :anesthesia, label: { text: "Anesthesia" }, label_col: "col-sm-6", control_col: "col-sm-6" do %>
+                <%= f.radio_button :anesthesia, 'local', label: "Local", inline: true, checked: true %>
+                <%= f.radio_button :anesthesia, 'general', label: "General", inline: true %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="row">
         <div class="col-sm-12">
           <div class="panel panel-default">
@@ -271,6 +280,13 @@
           </div>
         </div>
       </div>
+
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
 
     </div>
   </div>

@@ -55,7 +55,7 @@ private
 
 def biopsy_params
   params.require(:biopsy).permit( :patient_id, :patient_name, :patient_age, :patient_gender,
-                                  :accession_no, :exam_date,
+                                  :accession_no, :exam_date, :impression, :impression_other,
                                   :biopsy_needle_size, :coaxial_needle_size, :use_contrast_media, :anesthesia,
                                   :position, :lesion_location, :lesion_location_other, :lesion_size, :lesion_is_cavitary, :lesion_type, :pleural_distance,
                                   :emphysema_degree, :patient_cooperation,

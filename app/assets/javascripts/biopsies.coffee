@@ -1,4 +1,8 @@
 $(document).ready ->
+  $('#impression_other').focusin ->
+    $('#biopsy_impression_other').prop("checked", true)
+    console.log($('input[name="biopsy[impression]"]:checked')[0].value)
+
   $('#lesion_location_other').focusin ->
     $('#biopsy_lesion_location_other').prop("checked", true)
     console.log($('input[name="biopsy[lesion_location]"]:checked')[0].value)

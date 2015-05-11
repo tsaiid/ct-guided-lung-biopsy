@@ -4,6 +4,7 @@
     <th>ID</th>
     <th>Name</th>
     <th>Location</th>
+    <th>Impression</th>
     <th>Size (mm)</th>
     <th>Operator</th>
     <th>Func</th>
@@ -15,6 +16,7 @@
     <td><%= biopsy.patient_id %></td>
     <td><%= biopsy.patient_name %></td>
     <td><%= biopsy.lesion_location_text %></td>
+    <td><%= biopsy.impression_text %></td>
     <td><%= biopsy.lesion_size %></td>
     <td>
       <% biopsy.radiologists.each do |r| %>
