@@ -40,7 +40,12 @@ class BiopsiesController < ApplicationController
 
   def destroy
     @biopsy = Biopsy.find(params[:id])
-    @biopsy.destroy
+    if ["127.0.0.1", "192.168.197.209"].include?(request.remote_ip)
+      @biopsy.destroy
+      flash[:success] = "Entry deleted."
+    else
+      flash[:notice] = "You cannot delete this item. Please contact admin."
+    end
 
     redirect_to :action => :index
   end
