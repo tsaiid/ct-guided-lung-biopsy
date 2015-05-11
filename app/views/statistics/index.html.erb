@@ -1,0 +1,39 @@
+<% if @biopsy_count > 0 %>
+  <table class="table table-hover">
+    <tr>
+      <th>Duration</th>
+      <td><%= "#{@first_date} – #{@last_date}" %> </td>
+    </tr>
+    <tr>
+      <th>Count</th>
+      <td><%= @biopsy_count %></td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>
+        <table>
+          <tr>
+            <% @radiologists.each do |r| %>
+              <th><%= r.name %></th>
+            <% end %>
+          </tr>
+          <tr>
+            <% @radiologists.each do |r| %>
+              <td><%= r.biopsies.count %></td>
+            <% end %>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <th>Pneumothorax Rate</th>
+      <td><%= "#{@pneumothorax_rate} %" %></td>
+    </tr>
+    <tr>
+      <th>Pneumothorax Management Rate</th>
+      <td><%= "#{@pneumothorax_management_rate} %; overall: #{@pneumothorax_management_overall_rate} %" %></td>
+    </tr>
+  </table>
+<% else %>
+  No records.
+<% end %>
